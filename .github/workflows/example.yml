@@ -1,0 +1,22 @@
+name: github exaple for github action worksflow
+
+on:
+  push:
+  
+jobs:
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+    - 
+      run: echo "hello world"
+    -
+      name: checkout 
+      uses: actions/checkout@v3
+    -
+      name: list file in the directory
+      run: |
+       ls ${{  github.workspace }}
+    -
+      run: echo "Job Status is ${{ job.status }}"
+      
+        
